@@ -121,4 +121,35 @@ Future Improvements
 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Cybersecurity Honeypot and SIEM Integration
+
+This project demonstrates a honeypot deployment using Cowrie integrated with an ELK stack for log monitoring and threat detection.
+
+## Features
+- High-interaction honeypot (Cowrie) to detect malicious SSH activity.
+- Log aggregation and analysis using Elasticsearch, Logstash, and Kibana.
+- Real-time alerts for suspicious activity.
+
+## Environment Setup
+### AWS EC2 Configuration
+- **Honeypot Instance**: t2.medium, Cowrie installed.
+- **SIEM Instance**: ELK stack running on Debian.
+
+### Cowrie Setup
+- Configured to simulate a vulnerable SSH server.
+- Logs sent to ELK stack using Filebeat.
+
+## Visualizations
+### Kibana Dashboard
+![Kibana Dashboard](screenshots/kibana-dashboard.png)
+
+### Alerts
+Sample email alert triggered by failed SSH login attempts:
+![Email Alert](screenshots/email-alert.png)
+
+## Lessons Learned
+- Importance of centralizing logs for monitoring.
+- Understanding common attack patterns and alert configuration.
+
 
